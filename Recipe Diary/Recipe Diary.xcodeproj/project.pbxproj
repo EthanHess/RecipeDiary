@@ -1,0 +1,401 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2755E0B61BDC7ED30005C19E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2755E0B51BDC7ED30005C19E /* main.m */; };
+		2755E0B91BDC7ED30005C19E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2755E0B81BDC7ED30005C19E /* AppDelegate.m */; };
+		2755E0BC1BDC7ED30005C19E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2755E0BB1BDC7ED30005C19E /* ViewController.m */; };
+		2755E0BF1BDC7ED30005C19E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2755E0BD1BDC7ED30005C19E /* Main.storyboard */; };
+		2755E0C11BDC7ED30005C19E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2755E0C01BDC7ED30005C19E /* Assets.xcassets */; };
+		2755E0C41BDC7ED30005C19E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2755E0C21BDC7ED30005C19E /* LaunchScreen.storyboard */; };
+		2755E0CD1BDC7EF20005C19E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2755E0CC1BDC7EF20005C19E /* DetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		2755E0D01BDC81490005C19E /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2755E0CF1BDC81490005C19E /* HeaderView.m */; settings = {ASSET_TAGS = (); }; };
+		2755E0D51BDC85940005C19E /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2755E0D41BDC85940005C19E /* TableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		2755E0D81BDC86450005C19E /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 2755E0D71BDC86450005C19E /* Stack.m */; settings = {ASSET_TAGS = (); }; };
+		2755E0DB1BDD89DA0005C19E /* RecipeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2755E0DA1BDD89DA0005C19E /* RecipeController.m */; settings = {ASSET_TAGS = (); }; };
+		2755E0E01BDDADB50005C19E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2755E0DE1BDDADB50005C19E /* Model.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
+		2755E0F61BDEF3FD0005C19E /* Recipe+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2755E0EF1BDEF3FD0005C19E /* Recipe+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		2755E0F71BDEF3FD0005C19E /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 2755E0F11BDEF3FD0005C19E /* Recipe.m */; settings = {ASSET_TAGS = (); }; };
+		2755E0F81BDEF3FD0005C19E /* Ingredient+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2755E0F31BDEF3FD0005C19E /* Ingredient+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		2755E0F91BDEF3FD0005C19E /* Ingredient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2755E0F51BDEF3FD0005C19E /* Ingredient.m */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2755E0B11BDC7ED30005C19E /* Recipe Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recipe Diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2755E0B51BDC7ED30005C19E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2755E0B71BDC7ED30005C19E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2755E0B81BDC7ED30005C19E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2755E0BA1BDC7ED30005C19E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2755E0BB1BDC7ED30005C19E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2755E0BE1BDC7ED30005C19E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2755E0C01BDC7ED30005C19E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2755E0C31BDC7ED30005C19E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2755E0C51BDC7ED30005C19E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2755E0CB1BDC7EF20005C19E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		2755E0CC1BDC7EF20005C19E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		2755E0CE1BDC81490005C19E /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
+		2755E0CF1BDC81490005C19E /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
+		2755E0D31BDC85940005C19E /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		2755E0D41BDC85940005C19E /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		2755E0D61BDC86450005C19E /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		2755E0D71BDC86450005C19E /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		2755E0D91BDD89DA0005C19E /* RecipeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeController.h; sourceTree = "<group>"; };
+		2755E0DA1BDD89DA0005C19E /* RecipeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeController.m; sourceTree = "<group>"; };
+		2755E0DF1BDDADB50005C19E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		2755E0EE1BDEF3FD0005C19E /* Recipe+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Recipe+CoreDataProperties.h"; path = "../Recipe+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2755E0EF1BDEF3FD0005C19E /* Recipe+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Recipe+CoreDataProperties.m"; path = "../Recipe+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2755E0F01BDEF3FD0005C19E /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Recipe.h; path = ../Recipe.h; sourceTree = "<group>"; };
+		2755E0F11BDEF3FD0005C19E /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Recipe.m; path = ../Recipe.m; sourceTree = "<group>"; };
+		2755E0F21BDEF3FD0005C19E /* Ingredient+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Ingredient+CoreDataProperties.h"; path = "../Ingredient+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2755E0F31BDEF3FD0005C19E /* Ingredient+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Ingredient+CoreDataProperties.m"; path = "../Ingredient+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2755E0F41BDEF3FD0005C19E /* Ingredient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Ingredient.h; path = ../Ingredient.h; sourceTree = "<group>"; };
+		2755E0F51BDEF3FD0005C19E /* Ingredient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Ingredient.m; path = ../Ingredient.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2755E0AE1BDC7ED30005C19E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2755E0A81BDC7ED30005C19E = {
+			isa = PBXGroup;
+			children = (
+				2755E0B31BDC7ED30005C19E /* Recipe Diary */,
+				2755E0B21BDC7ED30005C19E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2755E0B21BDC7ED30005C19E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2755E0B11BDC7ED30005C19E /* Recipe Diary.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2755E0B31BDC7ED30005C19E /* Recipe Diary */ = {
+			isa = PBXGroup;
+			children = (
+				2755E0B71BDC7ED30005C19E /* AppDelegate.h */,
+				2755E0B81BDC7ED30005C19E /* AppDelegate.m */,
+				2755E0BA1BDC7ED30005C19E /* ViewController.h */,
+				2755E0BB1BDC7ED30005C19E /* ViewController.m */,
+				2755E0CB1BDC7EF20005C19E /* DetailViewController.h */,
+				2755E0CC1BDC7EF20005C19E /* DetailViewController.m */,
+				2755E0DC1BDD89E80005C19E /* Custom Views */,
+				2755E0CE1BDC81490005C19E /* HeaderView.h */,
+				2755E0CF1BDC81490005C19E /* HeaderView.m */,
+				2755E0D31BDC85940005C19E /* TableViewCell.h */,
+				2755E0D41BDC85940005C19E /* TableViewCell.m */,
+				2755E0DD1BDD89FC0005C19E /* Controllers */,
+				2755E0D91BDD89DA0005C19E /* RecipeController.h */,
+				2755E0DA1BDD89DA0005C19E /* RecipeController.m */,
+				2755E0D61BDC86450005C19E /* Stack.h */,
+				2755E0D71BDC86450005C19E /* Stack.m */,
+				2755E0E11BDDADCF0005C19E /* Models */,
+				2755E0EE1BDEF3FD0005C19E /* Recipe+CoreDataProperties.h */,
+				2755E0EF1BDEF3FD0005C19E /* Recipe+CoreDataProperties.m */,
+				2755E0F01BDEF3FD0005C19E /* Recipe.h */,
+				2755E0F11BDEF3FD0005C19E /* Recipe.m */,
+				2755E0F21BDEF3FD0005C19E /* Ingredient+CoreDataProperties.h */,
+				2755E0F31BDEF3FD0005C19E /* Ingredient+CoreDataProperties.m */,
+				2755E0F41BDEF3FD0005C19E /* Ingredient.h */,
+				2755E0F51BDEF3FD0005C19E /* Ingredient.m */,
+				2755E0DE1BDDADB50005C19E /* Model.xcdatamodeld */,
+				2755E0BD1BDC7ED30005C19E /* Main.storyboard */,
+				2755E0C01BDC7ED30005C19E /* Assets.xcassets */,
+				2755E0C21BDC7ED30005C19E /* LaunchScreen.storyboard */,
+				2755E0C51BDC7ED30005C19E /* Info.plist */,
+				2755E0B41BDC7ED30005C19E /* Supporting Files */,
+			);
+			path = "Recipe Diary";
+			sourceTree = "<group>";
+		};
+		2755E0B41BDC7ED30005C19E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2755E0B51BDC7ED30005C19E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2755E0DC1BDD89E80005C19E /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Custom Views";
+			sourceTree = "<group>";
+		};
+		2755E0DD1BDD89FC0005C19E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		2755E0E11BDDADCF0005C19E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2755E0B01BDC7ED30005C19E /* Recipe Diary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2755E0C81BDC7ED30005C19E /* Build configuration list for PBXNativeTarget "Recipe Diary" */;
+			buildPhases = (
+				2755E0AD1BDC7ED30005C19E /* Sources */,
+				2755E0AE1BDC7ED30005C19E /* Frameworks */,
+				2755E0AF1BDC7ED30005C19E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Recipe Diary";
+			productName = "Recipe Diary";
+			productReference = 2755E0B11BDC7ED30005C19E /* Recipe Diary.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2755E0A91BDC7ED30005C19E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Ethan Hess";
+				TargetAttributes = {
+					2755E0B01BDC7ED30005C19E = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 2755E0AC1BDC7ED30005C19E /* Build configuration list for PBXProject "Recipe Diary" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2755E0A81BDC7ED30005C19E;
+			productRefGroup = 2755E0B21BDC7ED30005C19E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2755E0B01BDC7ED30005C19E /* Recipe Diary */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2755E0AF1BDC7ED30005C19E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2755E0C41BDC7ED30005C19E /* LaunchScreen.storyboard in Resources */,
+				2755E0C11BDC7ED30005C19E /* Assets.xcassets in Resources */,
+				2755E0BF1BDC7ED30005C19E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2755E0AD1BDC7ED30005C19E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2755E0F71BDEF3FD0005C19E /* Recipe.m in Sources */,
+				2755E0BC1BDC7ED30005C19E /* ViewController.m in Sources */,
+				2755E0DB1BDD89DA0005C19E /* RecipeController.m in Sources */,
+				2755E0D81BDC86450005C19E /* Stack.m in Sources */,
+				2755E0D51BDC85940005C19E /* TableViewCell.m in Sources */,
+				2755E0D01BDC81490005C19E /* HeaderView.m in Sources */,
+				2755E0F81BDEF3FD0005C19E /* Ingredient+CoreDataProperties.m in Sources */,
+				2755E0E01BDDADB50005C19E /* Model.xcdatamodeld in Sources */,
+				2755E0F91BDEF3FD0005C19E /* Ingredient.m in Sources */,
+				2755E0B91BDC7ED30005C19E /* AppDelegate.m in Sources */,
+				2755E0B61BDC7ED30005C19E /* main.m in Sources */,
+				2755E0CD1BDC7EF20005C19E /* DetailViewController.m in Sources */,
+				2755E0F61BDEF3FD0005C19E /* Recipe+CoreDataProperties.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2755E0BD1BDC7ED30005C19E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2755E0BE1BDC7ED30005C19E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2755E0C21BDC7ED30005C19E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2755E0C31BDC7ED30005C19E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2755E0C61BDC7ED30005C19E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2755E0C71BDC7ED30005C19E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2755E0C91BDC7ED30005C19E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Recipe Diary/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.devmountain.Recipe-Diary";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2755E0CA1BDC7ED30005C19E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Recipe Diary/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.devmountain.Recipe-Diary";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2755E0AC1BDC7ED30005C19E /* Build configuration list for PBXProject "Recipe Diary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2755E0C61BDC7ED30005C19E /* Debug */,
+				2755E0C71BDC7ED30005C19E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2755E0C81BDC7ED30005C19E /* Build configuration list for PBXNativeTarget "Recipe Diary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2755E0C91BDC7ED30005C19E /* Debug */,
+				2755E0CA1BDC7ED30005C19E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2755E0DE1BDDADB50005C19E /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2755E0DF1BDDADB50005C19E /* Model.xcdatamodel */,
+			);
+			currentVersion = 2755E0DF1BDDADB50005C19E /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2755E0A91BDC7ED30005C19E /* Project object */;
+}

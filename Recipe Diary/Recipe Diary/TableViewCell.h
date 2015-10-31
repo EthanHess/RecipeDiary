@@ -12,5 +12,6 @@
 
 @property (nonatomic, strong) UIImageView *recipeImageView;
 @property (nonatomic, strong) UILabel *descriptionLabel;
+@property (nonatomic, strong) UILabel *titleLabel;
 
 @end

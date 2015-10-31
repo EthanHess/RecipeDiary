@@ -55,21 +55,19 @@
 
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
-//    return 1;
-    
-    return [RecipeController sharedInstance].recipes.count;
-}
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+//    
+//    return [RecipeController sharedInstance].recipes.count;
+//}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return 300;
+    return 380;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 1;
+    return [RecipeController sharedInstance].recipes.count; 
     
 }
 
@@ -81,27 +79,37 @@
     
     cell.recipeImageView.image = [UIImage imageWithData:recipe.picture];
     cell.descriptionLabel.text = recipe.description;
+    cell.titleLabel.text = recipe.title;
     
     return cell; 
     
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    HeaderView *headerView = [HeaderView new];
+    DetailViewController *detailViewController = [DetailViewController new];
     
-    Recipe *recipe = [RecipeController sharedInstance].recipes[section];
+    detailViewController.recipe = [RecipeController sharedInstance].recipes[indexPath.row];
     
-    headerView.titleLabel.text = recipe.title;
-    
-    return headerView;
-    
+    [self.navigationController pushViewController:detailViewController animated:YES]; 
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    
-    return 70;
-}
+//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+//    
+//    HeaderView *headerView = [HeaderView new];
+//    
+//    Recipe *recipe = [RecipeController sharedInstance].recipes[section];
+//    
+//    headerView.titleLabel.text = recipe.title;
+//    
+//    return headerView;
+//    
+//}
+
+//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+//    
+//    return 70;
+//}
 
 - (void)pushToDetail {
     

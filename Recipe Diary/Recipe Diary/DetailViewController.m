@@ -27,8 +27,19 @@
 
 @implementation DetailViewController
 
+- (void)updateWithRecipe:(Recipe *)recipe {
+    
+    self.recipe = recipe;
+    self.imageView.image = [UIImage imageWithData:recipe.picture];
+    self.titleField.text = recipe.title;
+    self.descriptionField.text = recipe.description;
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self updateWithRecipe:self.recipe]; 
     
     self.view.backgroundColor = [UIColor whiteColor];
     

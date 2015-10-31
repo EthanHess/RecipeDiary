@@ -39,8 +39,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self updateWithRecipe:self.recipe]; 
-    
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.saveButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(saveRecipe)];
@@ -122,6 +120,8 @@
     [self.scrollView addSubview:self.tableView];
     
     [self.tableView reloadData];
+    
+    [self updateWithRecipe:self.recipe];
     
 }
 

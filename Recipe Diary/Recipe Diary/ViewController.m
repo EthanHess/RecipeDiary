@@ -22,8 +22,15 @@
 
 @implementation ViewController
 
+- (void)registerForNotifications {
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(refreshData) name:@"recipeSaved" object:nil];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self registerForNotifications];
     
     self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     self.tableView.delegate = self;
@@ -54,11 +61,6 @@
     [tableView registerClass:[TableViewCell class] forCellReuseIdentifier:@"cell"];
 
 }
-
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//    
-//    return [RecipeController sharedInstance].recipes.count;
-//}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -93,23 +95,6 @@
     
     [self.navigationController pushViewController:detailViewController animated:YES]; 
 }
-
-//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-//    
-//    HeaderView *headerView = [HeaderView new];
-//    
-//    Recipe *recipe = [RecipeController sharedInstance].recipes[section];
-//    
-//    headerView.titleLabel.text = recipe.title;
-//    
-//    return headerView;
-//    
-//}
-
-//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-//    
-//    return 70;
-//}
 
 - (void)pushToDetail {
     

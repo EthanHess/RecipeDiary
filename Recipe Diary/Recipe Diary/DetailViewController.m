@@ -16,11 +16,14 @@
 @property (nonatomic, strong) UIImage *chosenImage;
 @property (nonatomic, strong) UIButton *addIngredientButton;
 @property (nonatomic, strong) UIButton *addPhotoButton;
+@property (nonatomic, strong) UIButton *showTableViewButton;
 @property (nonatomic, strong) UIBarButtonItem *saveButton;
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UITextField *titleField;
 @property (nonatomic, strong) UITextView *descriptionField;
+@property (nonatomic, strong) UIView *containerView;
+@property (nonatomic, strong) UIButton *hideContainerButton;
 
 
 @end
@@ -109,15 +112,48 @@
     self.descriptionField.layer.cornerRadius = 10;
     [self.scrollView addSubview:self.descriptionField];
     
+    //set up hidden container view with with button and table view for ingredients
+    self.containerView = [[UIView alloc]initWithFrame:CGRectMake(50, 100, self.view.frame.size.width - 100, self.view.frame.size.height - 200)];
+    self.containerView.layer.cornerRadius = 10;
+    self.containerView.layer.borderColor = [[UIColor blackColor]CGColor];
+    self.containerView.layer.borderWidth = 1;
+    self.containerView.hidden = YES;
+    self.containerView.backgroundColor = [UIColor cyanColor];
+    [self.view addSubview:self.containerView];
+    
     //set up tableView
-    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(50, self.imageView.frame.size.height + 500, self.view.frame.size.width - 100, 300) style:UITableViewStyleGrouped];
+    self.tableView = [[UITableView alloc]initWithFrame:CGRectMake(10, 30, self.containerView.frame.size.width - 20, self.containerView.frame.size.height - 60) style:UITableViewStyleGrouped];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.layer.cornerRadius = 10;
     self.tableView.layer.borderWidth = 1;
     self.tableView.layer.borderColor = [[UIColor blackColor]CGColor];
     [self registerTableView:self.tableView];
-    [self.scrollView addSubview:self.tableView];
+    [self.containerView addSubview:self.tableView];
+    
+    //set up container view dismiss button
+    self.hideContainerButton = [[UIButton alloc]initWithFrame:CGRectMake(self.containerView.frame.size.width / 3/4, 5, 20, 20)];
+    self.hideContainerButton.layer.cornerRadius = 10;
+    self.hideContainerButton.layer.borderWidth = 1;
+    self.hideContainerButton.layer.borderColor = [[UIColor blackColor]CGColor];
+    [self.hideContainerButton setTitle:@"X" forState:UIControlStateNormal];
+    self.hideContainerButton.titleLabel.font = [UIFont fontWithName:@"Chalkduster" size:16];
+    [self.hideContainerButton addTarget:self action:@selector(hideTableView) forControlEvents:UIControlEventTouchUpInside];
+    [self.hideContainerButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [self.containerView addSubview:self.hideContainerButton];
+    
+    //set up show container button
+    self.showTableViewButton = [[UIButton alloc]initWithFrame:CGRectMake(52 + self.addPhotoButton.frame.size.width, self.imageView.frame.size.height + 150, self.view.frame.size.width / 4, 50)];
+    self.showTableViewButton.layer.cornerRadius = 10;
+    self.showTableViewButton.layer.borderWidth = 1;
+    self.showTableViewButton.layer.borderColor = [[UIColor blackColor]CGColor];
+    [self.showTableViewButton setTitle:@"Show Ingredients" forState:UIControlStateNormal];
+    self.showTableViewButton.titleLabel.numberOfLines = 0;
+    self.showTableViewButton.titleLabel.font = [UIFont fontWithName:@"Chalkduster" size:8];
+    self.showTableViewButton.backgroundColor = [UIColor cyanColor];
+    [self.showTableViewButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [self.showTableViewButton addTarget:self action:@selector(showTableView) forControlEvents:UIControlEventTouchUpInside];
+    [self.scrollView addSubview:self.showTableViewButton];
     
     [self.tableView reloadData];
     
@@ -130,6 +166,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    
+    Ingredient *ingredient = self.recipe.ingredients[indexPath.row];
+    
+    cell.textLabel.text = ingredient.name;
+    cell.detailTextLabel.text = ingredient.quantity;
     
     return cell;
 }
@@ -173,6 +214,16 @@
     [self presentViewController:self.imagePicker animated:YES completion:nil];
 }
 
+- (void)hideTableView {
+    
+    self.containerView.hidden = YES;
+}
+
+- (void)showTableView {
+    
+    self.containerView.hidden = NO;
+}
+
 - (void)addIngredient {
     
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Add Ingredient" message:@"Enter info" preferredStyle:UIAlertControllerStyleAlert];
@@ -195,6 +246,8 @@
         
         [[RecipeController sharedInstance]addIngredientWithName:nameString andQuantity:quantityString toRecipe:self.recipe];
         
+        [self.tableView reloadData];
+        
     }]];
     
     [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
@@ -205,6 +258,8 @@
 - (void)saveRecipe {
     
     [[RecipeController sharedInstance]addRecipeWithTitle:self.titleField.text description:self.descriptionField.text andImage:self.chosenImage];
+    
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"recipeSaved" object:nil];
     
     [self refreshTableViewData];
 }
